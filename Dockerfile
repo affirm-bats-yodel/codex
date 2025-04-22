@@ -55,10 +55,17 @@ ARG CODEX_VERSION="0.1.2504211509"
 RUN npm i -g @openai/codex@${CODEX_VERSION} && \
   npm cache clean --force
 
-# Copy and set up firewall script
+# Copy and set up firewall, workspace script
 COPY scripts/init_firewall.sh /usr/local/bin/
+COPY scripts/init_workspace.sh /usr/local/bin/
 USER root
 RUN chmod +x /usr/local/bin/init_firewall.sh && \
   echo "node ALL=(root) NOPASSWD: /usr/local/bin/init_firewall.sh" > /etc/sudoers.d/node-firewall && \
-  chmod 0440 /etc/sudoers.d/node-firewall
+  chmod 0440 /etc/sudoers.d/node-firewall && \
+  chmod +x /usr/local/bin/init_workspace.sh && \
+  echo "node ALL=(root) NOPASSWD: /usr/local/bin/init_workspace.sh" > /etc/sudoers.d/node-workspace-init && \
+  chmod 0440 /etc/sudoers.d/node-workspace-init
 USER node
+
+# Set default workspace directory
+ENV WORKSPACE_DIRECTORY="/mnt/workspace"
