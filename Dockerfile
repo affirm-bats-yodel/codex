@@ -29,11 +29,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   zsh \
   && rm -rf /var/lib/apt/lists/*
 
-# Install glab binary via deb
+# Install glab binary via deb and remove cache
 ARG TARGETARCH
 ARG GLAB_VERSION="1.55.0"
 RUN curl -LO https://gitlab.com/gitlab-org/cli/-/releases/v${GLAB_VERSION}/downloads/glab_${GLAB_VERSION}_linux_${TARGETARCH}.deb && \
   apt-get install --yes ./glab_1.55.0_linux_amd64.deb && \
+  rm -rf ./glab_${GLAB_VERSION}_linux_${TARGETARCH}.deb && \
   rm -rf /var/lib/apt/lists/*
 
 # Ensure default node user has access to /usr/local/share
