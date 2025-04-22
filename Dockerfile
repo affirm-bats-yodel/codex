@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   unzip \
   ripgrep \
   zsh \
+  vim \
   && rm -rf /var/lib/apt/lists/*
 
 # Install glab binary via deb and remove cache
@@ -69,3 +70,6 @@ USER node
 
 # Set default workspace directory
 ENV WORKSPACE_DIRECTORY="/mnt/workspace"
+# Set default editor to vim
+ENV EDITOR="vim"
+ENV VISUAL="vim"
