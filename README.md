@@ -18,7 +18,7 @@ Docker Image for Codex Agent
 * [0.1.2504211509](https://github.com/affirm-bats-yodel/codex/releases/tag/0.1.2504211509)
   * OCI Image: `ghcr.io/affirm-bats-yodel/codex:0.1.2504211509`
   * https://github.com/affirm-bats-yodel/codex/pkgs/container/codex/399695519?tag=0.1.2504211509
-* [0.1.2504221401]()
+* [0.1.2504221401](https://github.com/affirm-bats-yodel/codex/releases/tag/0.1.2504221401)
   * OCI Image: `ghcr.io/affirm-bats-yodel/codex:0.1.2504221401`
   * `locales` package has been added to handle other languages.
   * https://github.com/users/affirm-bats-yodel/packages/container/codex/401495497?tag=0.1.2504221401
