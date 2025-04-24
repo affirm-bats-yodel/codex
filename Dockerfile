@@ -28,6 +28,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   ripgrep \
   zsh \
   vim \
+  locales \
   && rm -rf /var/lib/apt/lists/*
 
 # Install glab binary via deb and remove cache
@@ -52,7 +53,7 @@ ENV PATH=$PATH:/usr/local/share/npm-global/bin
 # Install codex
 # 
 # https://www.npmjs.com/package/@openai/codex/v/0.1.2504172351
-ARG CODEX_VERSION="0.1.2504211509"
+ARG CODEX_VERSION="0.1.2504221401"
 RUN npm i -g @openai/codex@${CODEX_VERSION} && \
   npm cache clean --force
 
