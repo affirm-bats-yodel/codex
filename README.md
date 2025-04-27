@@ -22,6 +22,10 @@ Docker Image for Codex Agent
   * OCI Image: `ghcr.io/affirm-bats-yodel/codex:0.1.2504221401`
   * `locales` package has been added to handle other languages.
   * https://github.com/users/affirm-bats-yodel/packages/container/codex/401495497?tag=0.1.2504221401
+* [0.1.2504251709]()
+  * OCI Image: `ghcr.io/affirm-bats-yodel/codex:0.1.2504251709`
+  * Update `@openai/codex` package to `0.1.2504251709`
+  * https://github.com/affirm-bats-yodel/codex/pkgs/container/codex/403337564?tag=0.1.2504251709
 
 ## How to use?
 
