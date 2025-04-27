@@ -52,8 +52,8 @@ ENV PATH=$PATH:/usr/local/share/npm-global/bin
 
 # Install codex
 # 
-# https://www.npmjs.com/package/@openai/codex/v/0.1.2504172351
-ARG CODEX_VERSION="0.1.2504221401"
+# https://www.npmjs.com/package/@openai/codex/v/0.1.2504251709
+ARG CODEX_VERSION="0.1.2504251709"
 RUN npm i -g @openai/codex@${CODEX_VERSION} && \
   npm cache clean --force
 
@@ -74,3 +74,4 @@ ENV WORKSPACE_DIRECTORY="/mnt/workspace"
 # Set default editor to vim
 ENV EDITOR="vim"
 ENV VISUAL="vim"
+ENV LC_ALL="C.UTF-8"
